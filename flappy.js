@@ -1,31 +1,31 @@
 var cvs = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
-//images
+
 var cat = new Image();
 var floor = new Image();
 var cucumUp = new Image();
 var cucumDown = new Image();
 var background = new Image();
 
-//sourcing images
+
 cat.src = "Pictures/smudge.png";
 floor.src = "Pictures/flr.png";
 cucumUp.src = "Pictures/cuUp.png";
-cucumDown.src = "Pictures/cuDown.png";
+cucumDown.src = "Pictures/cDown.png";
 background.src = "Pictures/bg.PNG";
 
-//gap between cucumbers
-var gap = 95;
+
+var gap = 90;
 var constant = cucumUp.height+gap;
 
-var cX = 10;    //cat x position
-var cY = 150;   // cat y position
+var cX = 10;
+var cY = 150;
 
-//gravity causing fall of cat during flight
+
 var gravity = 1.5;
 
 function moveUp() {
-  cY -= 20;
+  cY -= 30;
 }
 
 document.addEventListener("keydown",moveUp);
@@ -37,7 +37,7 @@ cucumbers[0] = {
   y : 0
 };
 
-//draw images
+
 function draw() {
   ctx.drawImage(background,0,0);
 
