@@ -52,6 +52,14 @@ function draw() {
         y : Math.floor(Math.random()*cucumUp.height) - cucumUp.height
       });
     }
+
+    if (cX + cat.width >= cucumbers[i].x && cX <= cucumbers[i].x + cucumUp.width
+    && (cY <= cucumbers[i].y + cucumUp.height || cY+cat.height >= cucumbers[i].y+constant
+    || cY + bird.height >= cvs.height - floor.height))
+    {
+      location.reload();
+
+    }
   }
   ctx.drawImage(floor,0,cvs.height-floor.height);
   ctx.drawImage(cat,cX,cY);
