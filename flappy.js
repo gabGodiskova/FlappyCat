@@ -15,7 +15,7 @@ cucumDown.src = "Pictures/cuDown.png";
 background.src = "Pictures/bg.PNG";
 
 //gap between cucumbers
-var gap = 90;
+var gap = 95;
 var constant = cucumUp.height+gap;
 
 var cX = 10;    //cat x position
